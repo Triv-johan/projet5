@@ -1,1 +1,1 @@
-<?=include('indexView.php');?>
+<?=include('vue/indexView.php');?>
