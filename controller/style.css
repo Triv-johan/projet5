@@ -9,3 +9,39 @@ p{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold
+}
+
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold
+}
+h6{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold
+}
+th{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+td{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+a{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold
+}
+input{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold
+}
+button{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+font-weight: bold
+}

@@ -40,7 +40,7 @@ $conn = mysqli_connect($db_server,$db_user_login, $db_user_pass, $db_name);
     OR debut LIKE '%$recherche%'
     OR fin LIKE '%$recherche%'
     ORDER BY etage
-    LIMIT 10 ");
+    LIMIT 20 ");
 
  // affichage du résultat
  if (empty ($_POST['recherche']))

@@ -9,7 +9,8 @@ require_once('modele/function.php');
 require_once('controller/connect.php');
 
 
-$sql = 'SELECT * FROM `concierge` ORDER BY fin';
+$sql = 'SELECT * FROM `concierge` ORDER BY fin 
+limit 10';
 
 // On prépare la requête
 $query = $db->prepare($sql);
@@ -35,7 +36,7 @@ require_once('controller/close.php');
 <body>
     <main class="container">
         <div class="row">
-            <section class="col-12">
+            <section class="col-12"><center>
                 <h1>Administration<hr></h1>
             <?php displayboard();
             ?>
@@ -67,20 +68,20 @@ require_once('controller/close.php');
                         }
                         ?>
                     </tbody>
-                </table>
-                <a href="controller/add.php" class="btn btn-primary">Ajouter un produit </a>
+                </table></center>
+                <a href="controller/add.php" class="btn btn-primary">Ajouter un produit </a><center>
                 
                  <h2>Historique</h2>       
                 <form method="POST" action=""> 
-     Rechercher une lettre un mot ou un chiffre <input type="text" name="recherche">
-     <button class="btn btn-primary" type="SUBMIT" value="Appliquer ou reset">Appliquer ou reset</button> 
+     <p>Rechercher une lettre un mot ou un chiffre</p> <input type="text" name="recherche"><button class="btn btn-primary" type="SUBMIT" value="Appliquer ou reset"><h6>Appliquer ou reset</h6></button>
+     
      </form>
      
      <?php displayhistorical();
      ?>
      
      
-            </section>
+                    </center></section>
         </div>
     </main>
 </body>
