@@ -23,8 +23,8 @@ require_once('close.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste des produits</title>
-
+    <link rel="stylesheet" href="style.css">
+    <title>Administration</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
@@ -79,7 +79,7 @@ require_once('close.php');
                 <a href="add.php" class="btn btn-primary">Ajouter un produit</a>
 
                 <form method="POST" action=""> 
-     Rechercher une lettre un mot ou un chiffre : <input type="text" name="recherche">
+     Rechercher une lettre un mot ou un chiffre <input type="text" name="recherche">
      <button class="btn btn-primary" type="SUBMIT" value="Appliquer ou reset">Appliquer ou reset</button> 
      </form>
      <?php
@@ -115,7 +115,7 @@ $conn = mysqli_connect($db_server,$db_user_login, $db_user_pass, $db_name);
  { 
 
  while($r = mysqli_fetch_array($q)){
- echo 'Historique:'.$r['etage'].','.$r['mission'].', '.$r['debut'].', '.$r['fin'].'<br />';
+ echo '<br/><span> (étage)=</span> '.$r['etage'].'<span> (mission)=</span> '.$r['mission'].'<span> (Date de début)= </span>'.$r['debut'].' <span>(Date de fin)=</span> '.$r['fin'].'<br />';
 }
  }
 
