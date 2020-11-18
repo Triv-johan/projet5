@@ -76,10 +76,14 @@ if($_POST){
                     <div class="form-group">
                         <label for="fin">fin</label>
                         <input type="date" id="fin" name="fin" class="form-control">
-                    </div>
-                    <button class="btn btn-primary">Envoyer</button>
-                    <a href="index.php"><button class="btn btn-primary">Retour</button></a>
-                </form>
+                        <br>
+                        <button class="btn btn-primary">Envoyer</button>
+                    </form> </div><a href="indexView.php"><button class="btn btn-primary">Retour</button></a>
+                   
+                    
+                    
+                    
+                
             </section>
         </div>
     </main>

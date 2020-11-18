@@ -1,1 +1,1 @@
-<?=include('index.php');?>
+<?=include('indexView.php');?>

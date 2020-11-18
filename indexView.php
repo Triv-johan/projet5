@@ -5,7 +5,8 @@ session_start();
 // On inclut la connexion à la base
 require_once('connect.php');
 
-$sql = 'SELECT * FROM `concierge`';
+$sql = 'SELECT * FROM `concierge` ORDER BY fin'
+;
 
 // On prépare la requête
 $query = $db->prepare($sql);
@@ -105,6 +106,7 @@ $conn = mysqli_connect($db_server,$db_user_login, $db_user_pass, $db_name);
     OR mission LIKE '%$recherche%'
     OR debut LIKE '%$recherche%'
     OR fin LIKE '%$recherche%'
+    ORDER BY etage
     LIMIT 10 ");
 
  // affichage du résultat

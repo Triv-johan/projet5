@@ -113,8 +113,9 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
                     </div>
                     <input type="hidden" value="<?= $produit['id']?>" name="id">
                     <button class="btn btn-primary">Envoyer</button>
-                    <a href="index.php"><button class="btn btn-primary">Retour</button></a>
                 </form>
+                <br>
+                <a href="index.php"><button class="btn btn-primary">Retour</button></a>
             </section>
         </div>
     </main>

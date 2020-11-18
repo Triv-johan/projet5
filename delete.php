@@ -26,7 +26,7 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
     // On vérifie si le produit existe
     if(!$produit){
         $_SESSION['erreur'] = "Cet id n'existe pas";
-        header('Location: index.php');
+        header('Location:index.php');
         die();
     }
 
