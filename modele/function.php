@@ -97,7 +97,7 @@ function displayadd(){
 function displaydelete(){
 // Est-ce que l'id existe et n'est pas vide dans l'URL
 if(isset($_GET['id']) && !empty($_GET['id'])){
-    require_once('controller/connect.php');
+    require_once('../controller/connect.php');
 
     // On nettoie l'id envoyé
     $id = strip_tags($_GET['id']);
@@ -119,7 +119,7 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
     // On vérifie si le produit existe
     if(!$produit){
         $_SESSION['erreur'] = "Cet id n'existe pas";
-        header('Location:vue/indexView.php');
+        header('Location: ../index.php');
         die();
     }
 
@@ -134,12 +134,12 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
     // On exécute la requête
     $query->execute();
     $_SESSION['message'] = "Produit supprimé";
-    header('Location: vue/indexView.php');
+    header('Location: ../index.php');
 
 
 }else{
     $_SESSION['erreur'] = "URL invalide";
-    header('Location: vue indexView.php');
+    header('Location: ../index.php');
 }
 }
 
