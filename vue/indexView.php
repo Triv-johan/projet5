@@ -23,6 +23,12 @@ $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
 require_once('controller/close.php');
 
+ // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
+ if(!isset($_SESSION["username"])){
+   header("Location: controller/login.php");
+   exit(); 
+ }
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -37,17 +43,23 @@ require_once('controller/close.php');
     <main class="container">
         <div class="row">
             <section class="col-12"><center>
+            <div class="sucess">
+    <h1>Bienvenue <?php echo $_SESSION['username']; ?>!</h1>
+    <p>C'est votre tableau de bord.</p>
+    <a href="controller/logout.php">Déconnexion</a>
+    </div>
                 <h1>Administration<hr></h1>
+
             <?php displayboard();
             ?>
                 <h2>Liste</h2>
                 <table class="table">
                     <thead>
-                        <th>id</th>
-                        <th>mission</th>
-                        <th>etage</th>
-                        <th>debut</th>
-                        <th>fin</th>
+                        <th>Id</th>
+                        <th>Mission</th>
+                        <th>Etage</th>
+                        <th>Debut</th>
+                        <th>Fin</th>
                     </thead>
                     <tbody>
                         <?php
