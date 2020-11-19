@@ -2,6 +2,13 @@
 
 // On démarre une session
 session_start();
+require_once('controller/close.php');
+
+ // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
+ if(!isset($_SESSION["username"])){
+   header("Location: controller/login.php");
+   exit(); 
+ }
 
 require_once('modele/function.php');
 
@@ -9,8 +16,7 @@ require_once('modele/function.php');
 require_once('controller/connect.php');
 
 
-$sql = 'SELECT * FROM `concierge` ORDER BY fin 
-limit 10';
+$sql = 'SELECT * FROM `concierge` ORDER BY fin limit 10';
 
 // On prépare la requête
 $query = $db->prepare($sql);
@@ -21,13 +27,6 @@ $query->execute();
 // On stocke le résultat dans un tableau associatif
 $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
-require_once('controller/close.php');
-
- // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
- if(!isset($_SESSION["username"])){
-   header("Location: controller/login.php");
-   exit(); 
- }
 
 ?>
 <!DOCTYPE html>
