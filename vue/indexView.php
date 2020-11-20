@@ -4,6 +4,7 @@
 session_start();
 require_once('controller/close.php');
 
+
  // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
  if(!isset($_SESSION["username"])){
    header("Location: controller/login.php");
@@ -15,8 +16,9 @@ require_once('modele/function.php');
 // On inclut la connexion à la base
 require_once('controller/connect.php');
 
+$sql = 'SELECT * FROM `concierge` ORDER BY fin DESC limit 10';
 
-$sql = 'SELECT * FROM `concierge` ORDER BY fin limit 10';
+
 
 // On prépare la requête
 $query = $db->prepare($sql);

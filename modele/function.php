@@ -74,6 +74,7 @@ function displayadd(){
             $fin = strip_tags($_POST['fin']);
     
             $sql = 'INSERT INTO `concierge` (`mission`, `etage`, `debut`, `fin`) VALUES (:mission, :etage, :debut, :fin);';
+            
     
             $query = $db->prepare($sql);
     
@@ -143,5 +144,6 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
 }
 }
 
-   
+
+ 
 ?>
